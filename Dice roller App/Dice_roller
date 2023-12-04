@@ -1,0 +1,28 @@
+import random
+
+def roll_dice(num_dice):
+    return [random.randint(1, 6) for _ in range(num_dice)]
+
+def main():
+    print("Welcome to the Dice Rolling App!")
+    
+
+    while True:
+        num_dice = int(input("Enter the number of dice to roll ,(0 - quit, 1 - One dice , 2 - Two dice):"))
+         
+        if num_dice == 0:
+            print("Thanks for using the Dice Rolling App. Goodbye!")
+        elif num_dice == 1:
+            print("One dice is rolling")
+        elif num_dice == 2:
+            print("Two dices are rolling")
+        else:
+            print("Only two dices can be rolled. Thank you! ")
+            break
+            
+        results = roll_dice(num_dice)
+        print("Dice Roll Result:", results)
+    
+
+if __name__ == "__main__":
+    main()
